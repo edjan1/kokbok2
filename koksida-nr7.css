@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100px auto;
+    min-height: 100vh;
+    grid-template-areas: 
+    'a a'
+    'b b'
+    ;
+}
+
+header {
+    grid-area: a;
+    font-size: 40px;
+    color: yellow;
+}
+
+.biggie {
+    grid-area: a;
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 100%;
+}
+
+img {
+    background: url(kaka.jpg);
+    background-size: 100px;
+    background-repeat: no-repeat;
+
+}
+
+aside {
+    grid-area: b;
+    grid-column: 2;
+    font-size: 40px;
+    background-color: yellow;
+}
+
+main {
+    grid-area: a;
+    grid-column: 2;
+    color: red;
+}
+
+image {
+    grid-area: b;
+    grid-column: 1;
+    background-image: url(skone.jpg);
+}
+
+.sr1 {
+    background-color: red;
+    padding: 26.5px;
+    font-size: 20px;
+}
+
+.invis {
+    background-color: red;
+    padding: 41px;
+}
+
+.sr2 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .sr2 {
+       width: 150px;
+       font-size: 20px;
+   }
+   .invis {
+      display: none; 
+   }
+
+}
